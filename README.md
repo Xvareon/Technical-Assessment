@@ -1,4 +1,4 @@
-## Laravel 10 application made with PHP, Blade, MySQL, and XAMPP.
+## Laravel 10 API application that retrieves a list of cocktails from https://www.thecocktaildb.com/api.php
 
 ## PROJECT DEPENDENCIES
 - [Composer](https://getcomposer.org/download/).
