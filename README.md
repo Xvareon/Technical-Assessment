@@ -10,26 +10,10 @@
 - Go to the following folder directory: xampp -> htdocs -> git bash here using right click
 - In the git bash GUI, enter:" composer create-project laravel/laravel your-project-name "
 - Open Xampp application and start the Apache and MySQL actions
+- Open the link: https://www.thecocktaildb.com/api.php (Program will not run if this step is skipped)
+- Now make the necessary MVC architecture needed like in this repository
 - Open VS Code and its terminal then enter:" php artisan serve " to start
 
-## DB SETUP
-- Open Xampp application and click the Admin in MySQL (make sure to start them first)
-- phpMyAdmin will open and there create the name of your database
-- Go to your project directory and go to the .env file and change the credentials if necessary
-- Change the DB_DATABASE to the name of the database you created in the phpMyAdmin page
-- Run the VS Code terminal and enter:" php artisan migrate " to check db connection
-- To create a table, use the migration files of laravel.
-- To do this, enter in the terminal:" php artisan make:migration create_yourtablename_table "
-- To populate the columns, go to your project directory -> database -> migrations -> yourtablename
-- Modify the schema to your needs and run the terminal command:" php artisan migrate "
-- To create a model, enter in the terminal:" php artisan make:model Yourmodelname " (the model name should start with uppercase and is singular)
-- Create a protected fillable inside Yourmodelname containing the corresponding columns in your table
-- To create the controller, enter in the terminal:" php artisan make:controller YourmodelnameController "
-- import your model in your controller if it is not already imported like this:" use App\Models\Yourmodelname; "
-- Import the respective controller to the web.php file in the routes directory like this:" use App\Http\Controllers\YourmodelnameController; "
-
-## AND YOU ARE SET!
-- Now just create your routes and views as you would normally.
 
 ## =================================================
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
