@@ -24,12 +24,16 @@ class CocktailController extends Controller{
     }
 
     public function getCocktailDetails($id){
+        // Make a GET request to the API to get a specific data about a cocktail
         $response = Http::get("www.thecocktaildb.com/api/json/v1/1/lookup.php?i={$id}");
 
+        // Check if the request was successful (status code 2xx)
         if ($response->successful()) {
             $cocktail = $response->json()['drinks'][0];
+            // Pass the data to a view for rendering
             return view('cocktails.details', ['cocktail' => $cocktail]);
         } else {
+            // Handle the case where the request was not successful
             abort(500, 'Failed to retrieve cocktail details');
         }
     }
